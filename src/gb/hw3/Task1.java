@@ -10,20 +10,20 @@ package gb.hw3;
 
 
 public class Task1 {
-    public static void main(String[] args) throws Exceptions.WrongPassworFormat {
+    public static void main(String[] args) throws Exceptions.WrongPasswordFormat {
         PasswordVerifier psver = new PasswordVerifier();
         psver.passwordCheck("hEllo1eggw");
         psver.passwordCheck("privet87");
     }
 
     static class PasswordVerifier {
-        void passwordCheck(String password) throws Exceptions.WrongPassworFormat {
+        void passwordCheck(String password) throws Exceptions.WrongPasswordFormat {
             if (password.length() < 8) {
-                throw new Exceptions.WrongPassworFormat("Too short");
+                throw new Exceptions.WrongPasswordFormat("Too short");
             } else if (!hasNumber(password)) {
-                throw new Exceptions.WrongPassworFormat("Password should contains at least one digit.");
+                throw new Exceptions.WrongPasswordFormat("Password should contains at least one digit.");
             } else if (!hasUpperSymbol(password)) {
-                throw new Exceptions.WrongPassworFormat("Password should contains at least one Uppercase symbol.");
+                throw new Exceptions.WrongPasswordFormat("Password should contains at least one Uppercase symbol.");
             } else {
                 System.out.println("Password is correct");
             }
