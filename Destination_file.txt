@@ -1,0 +1,3 @@
+Some text that we are writing into file. :) 
+And new line
+And one more
